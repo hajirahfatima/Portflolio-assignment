@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajirah Fatima | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b0612;
+            color: #f5f0fa;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+
+        /* NAVBAR */
+
+        nav {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1100px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 20px;
+
+            background: rgba(15, 8, 24, 0.9);
+            border: 1px solid #30203f;
+            border-radius: 14px;
+
+            backdrop-filter: blur(15px);
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #a875ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #b9afc4;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b987ff;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .small-text {
+            color: #aa7aff;
+            font-size: 14px;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: #a875ff;
+        }
+
+        .hero p {
+            margin-top: 25px;
+            max-width: 570px;
+            color: #aaa0b5;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .hero-quote {
+            margin-top: 22px;
+            color: #ddd5e4;
+            font-size: 15px;
+        }
+
+        .hero-quote span {
+            color: #a875ff;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 350px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-right: 3000px;
+        }
+
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .heading {
+            margin-bottom: 45px;
+        }
+
+        .number {
+            color: #a875ff;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .heading h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 48px;
+            letter-spacing: -2px;
+        }
+
+        .heading h2 span {
+            color: #a875ff;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            max-width: 750px;
+            color: #aaa0b5;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .about strong {
+            color: #eee8f5;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 30px;
+
+            background: #120a1b;
+            border: 1px solid #30203f;
+            border-radius: 18px;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-6px);
+            border-color: #67428a;
+        }
+
+        .skill h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            color: #9f95aa;
+            line-height: 1.7;
+        }
+
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background: #120a1b;
+            border: 1px solid #30203f;
+            border-radius: 18px;
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+            border-color: #67428a;
+        }
+
+        .project-image {
+            height: 230px;
+            background: #180d24;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            color: #9f95aa;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .project-button {
+            display: inline-block;
+            background: #713bc1;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .project-button:hover {
+            background: #8c52e0;
+        }
+
+
+        /* CONTACT */
+
+        .contact-box {
+            padding: 50px;
+
+            background: #120a1b;
+            border: 1px solid #30203f;
+            border-radius: 20px;
+        }
+
+        .contact-box h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 45px;
+            max-width: 650px;
+        }
+
+        .contact-box h2 span {
+            color: #a875ff;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            padding: 12px 16px;
+            border: 1px solid #39274a;
+            border-radius: 9px;
+            color: #c7bdcf;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            border-color: #9d6ce8;
+            color: white;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px 0;
+            color: #655b6d;
+            font-size: 13px;
+        }
+
+        .aa{
+            color: #120a1b;
+        }
+
+
+
+        .hero-text,
+        .hero-image {
+            animation: appear 0.8s ease;
+        }
+
+        .name{
+            font-size: 40px;
+            margin-top: 30px;
+            color: #c599f7;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+
+            .hero-image {
+                width: 230px;
+                height: 270px;
+            }
+
+            .skills,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .heading h2 {
+                font-size: 40px;
+            }
+
+            .contact-box {
+                padding: 30px;
+            }
+
+            .contact-box h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            nav {
+                width: 95%;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 9px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-image {
+                width: 200px;
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <a href="#home" class="logo">
+            Hajirah<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <h1>
+                        Turning ideas<br>
+                        into <span>websites.</span>
+                       
+                      <div class="name"> Hi<span style="color:#0b0612">a</span>My<span style="color: #0b0612;">a</span>Name<span style="color: #0b0612;">a</span>is<span style="color: #0b0612;">a</span><span style="color: #fffcfc;">Hajirah</span></div>
+                    </h1>
+
+                    <p>
+                        I'm a student learning web development and
+                        cloud computing. I enjoy creating websites,
+                        trying new designs and turning things I learn
+                        into actual projects.
+                    </p>
+
+                    <div class="hero-quote">
+                        <span>.</span> Learning, building and improving.
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+
+
+                    <img src="Screenshot_2026-09-27_153057-removebg-preview.png" alt="Hajirah Fatima">
+
+
+
+                    <img src="YOUR-IMAGE-HERE.jpg" alt="Hajirah Fatima">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <div class="number">
+                    ABOUT
+                </div>
+
+                <h2>
+                   <span><i class="fa-solid fa-user"></i></span> About <span>me.</span>
+                </h2>
+
+            </div>
+
+            <div class="about">
+
+                <p>
+                    I'm Hajirah Fatima, a student who is currently
+                    learning <strong>Web Development</strong> and
+                    <strong>Cloud Computing</strong>. Also I am a Vibe Coder
+                </p>
+
+                <br>
+
+                <p>
+                    I'm still learning and experimenting, but I like
+                    actually building things instead of only learning
+                    the theory. Every project gives me something new
+                    to try and improve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <div class="number">
+                    SKILLS
+                </div>
+
+                <h2>
+                    <span><i class="fa-solid fa-lightbulb"></i></span>My <span>skills.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills">
+
+                <div class="skill">
+
+                    <h3>Canva <span><img src="canva.png" alt="" style="height: 30px; width: 30px;"></span></h3>
+
+                    <p>
+                        I use Canva to create designs, wallpapers, stickers, graphics and
+                        other visual content.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <h3>Front-End Development <span style="color:#67428a"><i class="fa-solid fa-globe"></i></span></h3> 
+
+                    <p>
+                        I'm learning how to build websites using
+                        HTML and CSS and make them responsive.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <div class="number">
+                    PROJECTS
+                </div>
+
+                <h2>
+                    My <span>projects.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="projects">
+
+
+                <!-- EMPLOYEE MANAGEMENT SYSTEM -->
+
+                <div class="project">
+
+                    <div class="project-image">
+
+
+                             <img src="Employee.png"
+                                  alt="Employee Management System">
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>
+                            Employee Management System
+                        </h3>
+
+                        <p>
+                            A project I made for practicing website
+                            structure and creating an employee management
+                            interface.
+                        </p>
+
+                        <a href="https://hajirahfatima.github.io/Employee-Management-finall/" target="_blank"
+                            class="project-button">
+                            View Project 
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CALCULATOR -->
+
+                <div class="project">
+
+                    <div class="project-image">
+
+
+                             <img src="Calculator.png"
+                                  alt="Calculator">
+
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>
+                            Calculator
+                        </h3>
+
+                        <p>
+                            A calculator project I made while practicing
+                            front-end development and creating a simple
+                            working interface.
+                        </p>
+
+                        <a href="https://hajirahfatima.github.io/Calculator/" target="_blank" class="project-button">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COFFEE SHOP -->
+
+                <div class="project">
+
+                    <div class="project-image">
+
+                             <img src="Coffee.png"
+                                  alt="Coffee Shop Website">
+
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>
+                            Coffee Shop
+                        </h3>
+
+                        <p>
+                            A coffee shop website I created to practice
+                            layouts, styling and making a website look
+                            more complete.
+                        </p>
+
+                        <a href="https://hajirahfatima.github.io/Coffee-shop-website/" target="_blank"
+                            class="project-button">
+                            View Project 
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ECOMMERCE -->
+
+                <div class="project">
+
+                    <div class="project-image">
+
+
+
+                             <img src="Ecommerce.png"
+                                  alt="Ecommerce Landing Store">
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <h3>
+                            Ecommerce Landing Store
+                        </h3>
+
+                        <p>
+                            A CSS assignment where I practiced creating
+                            a product-focused landing page and working
+                            with different layouts.
+                        </p>
+
+                        <a href="https://hajirahfatima.github.io/CSS-Assignment-7/" target="_blank"
+                            class="project-button">
+                            View Project 
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div class="number">
+                     CONTACT
+                </div>
+
+                <h2>
+                    Let's <span>connect.</span>
+                </h2>
+
+                <div class="contact-links">
+
+                    <a href="https://www.linkedin.com/in/hajirah-fatima-585b783b6/" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/hajirahfatima" target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="mailto:hajirahfatima@gmail.com">
+                        Email
+                    </a>
+                        <p>
+                            Have a question, project idea, or just want to connect?
+I’d love to hear from you. Turning ideas into websites.
+                        </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Hajirah Fatima
+    </footer>
+
+
+</body>
+
+</html>
